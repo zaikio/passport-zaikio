@@ -15,7 +15,7 @@ export default class Strategy extends OAuth2Strategy {
       authorizationURL: `https://${domain}/oauth/authorize`,
       tokenURL: `https://${domain}/oauth/access_token`,
       callbackURL: options.callbackURL,
-      scope: [...(options.scopes || []), "zaikio.person.r"],
+      scope: options.scopes || ["zaikio.person.r"],
       clientSecret: "",
       passReqToCallback: false,
       pkce: false,
